@@ -101,10 +101,10 @@ describe('Should be IRONHACK worthy', function () {
 /*  BONUS: cyclical maze
     I was thinking that solve can traverse every single possible path by visiting every possible square.
     A possible square is one that is open, in bounds, and it has not been visited before.
-    This will create several possibility paths, but only the path that finds the exit returns an [],
-    the other paths return null. To avoid going back, I will modify map, converting boolean to number to mark visited cells.
-    I will also have helpers to determine when the miner is going left, right, down. etc
-    Being in a cell means being in a closure, while being on a cell, if the returned value from solve is an array
+    This will create several possibility paths, but only the path that finds the exit returns an array of moves,
+    the other paths return null. To avoid going back, I will modify the map, converting boolean to number to mark visited cells.
+    I will also have helpers to determine when the miner is going left, right, down. etc.
+    Being in a cell means being in a closure, while being in a cell, if the returned value from solve is an array
     this means that path was succesful, so we push the direction that path took into the result. This will chain back
     to the original caller, returning the path to the exit!
     In the other hand, while being on a cell, if the returned value from solve is null, this means that path leads nowhere.
