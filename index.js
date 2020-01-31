@@ -93,12 +93,6 @@ function isInBounds(map, pos) {
     return map[pos.x] !== undefined && map[pos.x][pos.y] !== undefined;
 }
 
-//const map = [[true, false],
-//[true, true]];
-
-//const path = solve(map, { x: 0, y: 0 }, { x: 1, y: 1 })
-//console.log(path)
-
 module.exports = {
     solve
 }
